@@ -1,0 +1,30 @@
+import java.io.*;
+
+class p6{
+
+	public static void main( String[] args)throws IOException{
+
+		BufferedReader a = new BufferedReader(new InputStreamReader(System.in));
+
+		int row=Integer.parseInt(a.readLine());
+		int b=1;
+
+		for(int i=1;i<=row;i++){
+
+			for(int j=1;j<=i;j++){
+
+				if(i%2==1){
+
+					System.out.print(j+" ");
+				}
+				else{
+					System.out.print((char)(b+64)+" ");
+					
+				}
+				b++;
+
+			}
+		System.out.println();
+		}
+	}
+}
