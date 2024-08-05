@@ -26,6 +26,7 @@ For each test case, output the product of the max element of the first array and
 minimum element of the second array.
 Constraints:
 1 ≤ N, M ≤ 10^6
+-10^8 ≤ Ai, Bi ≤ 10^8
  */
 import java.util.*;
 class maxminproduct{
