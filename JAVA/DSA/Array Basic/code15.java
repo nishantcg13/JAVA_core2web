@@ -35,13 +35,18 @@ class distinct{
         System.out.println("Enter the size of the array: ");
         int size = sc.nextInt();
         Set <Integer> lhs = new LinkedHashSet<Integer>();
-
+        int temp;
         for(int i=0;i<size;i++){
-            lhs.add(sc.nextInt);
+            temp = sc.nextInt();
+            lhs.add(temp);
         }
         int sum=0;
-        for(int i=0;i<lhs.length; i++){
-            sum+=
+        for(Integer x :lhs){
+            sum+=x;
         }
+        System.out.println("Sum is "+sum);
+    }
+    public static void main(String[] args) {
+        hello();
     }
 }
