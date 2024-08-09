@@ -29,6 +29,9 @@ Constraints:
 
  */
 
+import java.util.HashMap;
+import java.util.*;
+
 class unique{
     static void uniqueEle(){
         Scanner sc = new Scanner (System.in);
@@ -39,10 +42,26 @@ class unique{
         for(int i =0 ; i<size; i++){
             arr[i] = sc.nextInt();
         }
-        Arrays.sort(arr);
+       
+
+        HashMap<Integer, Integer> people = new HashMap<Integer, Integer>();
 
         for(int i=0;i<size;i++){
-            
+            if(!people.containsKey(arr[i])){
+                people.put(arr[i], 1);
+            }else{
+                people.put(arr[i], people.get(arr[i])+1);
+            }
         }
+        for(int i=0;i<size;i++){
+            if(people.get(arr[i])==1){
+                System.out.println(arr[i]);
+            }
+        }
+        
+    } 
+
+    public static void main(String[] args) {
+        uniqueEle();
     }
 }
